@@ -13,6 +13,12 @@
 		<javaee.verison>7.0</javaee.verison>
 	</properties>
 	<dependencies>
+		<!-- Linking backend project here -->
+		<dependency>
+			<groupId>net.sm</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
