@@ -15,7 +15,7 @@
     ">
 
 	<context:component-scan base-package="net.sm.onlineshopping"/>
-	<context:component-scan base-package="net.sm.shoppingbackend.daoimpl"/>
+	<context:component-scan base-package="net.sm.shoppingbackend"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -22,9 +22,13 @@
 	<meta name="author" content="">
 	
 	<title>Online Shopping- ${title}</title>
+	<script>
 	
+	
+	</script>
 	<script type="text/javascript">
 	    	window.menu = '${title}';
+	    	window.contextRoot = '${contextRoot}'
 	    </script>
 	
 	<!-- Bootstrap core CSS -->
@@ -33,8 +37,12 @@
 	<!-- Bootstrap theme CSS -->
 	<link href="${css}/bootstrap-theme.css" rel="stylesheet">
 	
+	<!-- Bootstrap data table -->
+	<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+	
 	<!-- Custom styles for this template -->
 	<link href="${homepagecss}/shop-homepage.css" rel="stylesheet">
+	
 	
 	</head>
 	
@@ -65,13 +73,24 @@
 					<%@include file="listProducts.jsp"%>
 				</c:if>
 				
+				<c:if test="${userClickShowProduct==true}">
+					<!-- Loads single Product page  -->
+					<%@include file="singleProduct.jsp"%>
+				</c:if>
+				
 			</div>
 			<!-- Footer here -->
 			<%@include file="./shared/footer.jsp"%>
 	
 			<!-- Bootstrap core JavaScript -->
-			<script src="${jquery}/jquery.min.js"></script>
-			<script src="${js}/bootstrap.bundle.min.js"></script>
+			<script src="${jquery}/jquery.js"></script>
+			
+			<script src="${js}/bootstrap.js"></script>
+			<!-- Jquery DataTable -->
+			<script src="${js}/jquery.dataTables.js"></script>
+			
+			<!-- Jquery Bootstrap DataTable -->
+			<script src="${js}/dataTables.bootstrap.js"></script>
 	
 			<!-- Self coded js -->
 			<script src="${js}/myapp.js"></script>
